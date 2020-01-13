@@ -5,6 +5,7 @@ pathPrefix: `/testsite`,
     title: `Expat Guide Turkey`,
     description: `Expat Guide Turkey - Ata Institutional Consultancy & Consulting Services for foreigners.`,
     author: `@amreshabux`,
+    siteUrl:`https://cms.expatguideturkey.com`,
   },
   plugins: [
     `gatsby-plugin-scroll-reveal`,

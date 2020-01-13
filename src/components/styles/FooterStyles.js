@@ -105,7 +105,7 @@ export const FooterWrapper = styled.footer`
   width: 40px;
   height: 4px;
   position: absolute;
-  bottom: 7px;
+  bottom: 6px;
 }
 
   .social img:hover {

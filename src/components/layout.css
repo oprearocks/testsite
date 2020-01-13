@@ -52,6 +52,15 @@ a {
   -webkit-text-decoration-skip: objects;
 }
 
+a {
+  text-decoration: none;
+  color:#d22e;
+  background-color: transparent;
+}
+a:active{
+  text-decoration: none;
+  color:#d22e;
+}
 
 a:active,
 a:hover {
@@ -702,14 +711,16 @@ div.service-column{
 .row{
 margin-right: 29px!important;
 }
-.col-md-2{
-  position: inherit!important;
- }
+
 
 @media (max-width: 480px) {
   .col-md-2{
    position: inherit!important;
   }
+  .col-md-6{
+    position: relative!important;
+   }
+   
 }
 
 
@@ -1001,4 +1012,16 @@ hr.style14 {
   background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
   background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+}
+
+.btn-link {
+  font-weight: 700;
+  color: #f44336;
+  text-decoration: none!important;
+}
+
+.btn-link:hover {
+  font-weight: 700;
+  color: #000;
+  text-decoration: none!important;
 }

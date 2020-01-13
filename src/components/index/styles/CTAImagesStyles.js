@@ -60,12 +60,13 @@ export const CTAImageTextWrapper = styled.div`
   color: #fff;
   top: 0px;
   width: calc(100% - 30px);
-  height: calc(100% - 20px);
+  height: calc(100% - 15px);
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: #41373773;
 `;
 
 export const CTAImageText = styled.p`

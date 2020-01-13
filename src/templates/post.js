@@ -10,11 +10,14 @@ import PostSidebar from '../components/post/PostSidebar';
 import PageHero from '../components/PageHero';
 import PageTransition from 'gatsby-plugin-page-transitions';
 
+import ShareButtons from "../components/ShareButtons";
+
 const PostContent = styled.article`
   margin: 20px 0 0 0;
 `;
 
 const postTemplate = ({ data: { post } }) => (
+  
 <PageTransition>
 <Layout>
     <PageHero img={post.featured_media.localFile.childImageSharp.fluid} />
@@ -36,10 +39,12 @@ const postTemplate = ({ data: { post } }) => (
         <PostContent className="col-lg-9">
           <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
           <div dangerouslySetInnerHTML={{ __html: post.content }} />
+        <ShareButtons/>
         </PostContent>
       </div>
     </div>
-  </Layout>
+    
+    </Layout>
   </PageTransition>
 );
 
@@ -55,6 +60,8 @@ export const pageQuery = graphql`
       id 
       title
       content
+      excerpt
+      slug
       author {
         name
       }

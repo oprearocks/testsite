@@ -51,6 +51,18 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+
+      allSite {
+        edges {
+          node {
+            siteMetadata {
+              title
+              description
+              author
+            }
+          }
+        }
+      }
      }
   `);
 
@@ -63,8 +75,9 @@ exports.createPages = async ({ graphql, actions }) => {
     allWordpressPage,
     allWordpressPost,
     allWordpressCategory,
-   } = result.data;
+  } = result.data;
 
+   
   // Create archive pages for each category
   allWordpressCategory.edges.forEach(catEdge => {
     // First filter out the posts that belongs to the current category
@@ -108,7 +121,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   });
 
-  allWordpressPost.edges.forEach(edge => {
+   allWordpressPost.edges.forEach(edge => {
     if (edge.node.status === 'publish') {
       createPage({
         path: `/blogs${edge.node.link}`,

@@ -30,6 +30,10 @@ export const NavigationWrapper = styled.nav`
       transform: scaleX(0);
       transition: .25s linear;
     }
+    a:hover {
+      outline-width: 0;
+      text-decoration: none;
+     }
 
 a:hover:before,
 a:focus:before {
